@@ -85,7 +85,14 @@ class _BackgroundState extends State<Background> {
     } else if (_isVideo(widget.path) &&
         _videoController != null &&
         _videoController!.value.isInitialized) {
-      background = VideoPlayer(_videoController!); // Display the video.
+      background = FittedBox(
+        fit: BoxFit.cover, // fills the whole screen
+        child: SizedBox(
+          width: _videoController!.value.size.width,
+          height: _videoController!.value.size.height,
+          child: VideoPlayer(_videoController!),
+        ),
+      ); // Display the video.
     } else {
       background = Container(
           color: Theme.of(context).colorScheme.surface); // Fallback background.

@@ -38,7 +38,7 @@ class MyHomePage extends StatelessWidget {
                   padding: const EdgeInsets.all(24),
                   margin: EdgeInsets.symmetric(horizontal: 20),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
+                    color: Colors.white.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(16),
                     boxShadow: [
                       BoxShadow(
@@ -52,15 +52,13 @@ class MyHomePage extends StatelessWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        FlutterLogo(
-                          size: 75,
-                        ),
+                        FlutterLogo(size: 75),
                         const SizedBox(height: 24),
                         TextFormField(
                           decoration: InputDecoration(
                             hintText: 'Email',
                             filled: true,
-                            fillColor: Colors.white.withOpacity(0.5),
+                            fillColor: Colors.white.withValues(alpha: 0.5),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
@@ -72,7 +70,7 @@ class MyHomePage extends StatelessWidget {
                           decoration: InputDecoration(
                             hintText: 'Password',
                             filled: true,
-                            fillColor: Colors.white.withOpacity(0.5),
+                            fillColor: Colors.white.withValues(alpha: 0.5),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
